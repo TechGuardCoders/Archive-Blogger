@@ -2,7 +2,7 @@
 
 An automatic multi-agent Blogger created by **Tech Guard** ([techguard.io](https://techguard.io)).
 It plans, validates, and writes polished technical blog posts covering company
-achievements, milestones, and accomplishments — plus industry knowledge sharing.
+achievements, milestones, and accomplishments, plus industry knowledge sharing.
 
 Built as a multi-agent graph: a root Conductor agent delegates to two self-healing
 loop agents (Planner and Writer), each paired with a binary validation checker
