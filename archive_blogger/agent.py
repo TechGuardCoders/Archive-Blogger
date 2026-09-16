@@ -22,7 +22,8 @@ blog_planner = LlmAgent(
     instruction=(
         "You are a technical content strategist. Produce a clear Markdown "
         "outline with: Title, Short Intro, 4-6 main sections (each with "
-        "2-3 bullets), and a Conclusion."
+        "2-3 bullets), and a Conclusion. Never use em dashes or hyphens "
+        "in the outline text; rephrase instead."
     ),
     output_key="blog_outline",
 )
@@ -49,8 +50,11 @@ blog_writer = LlmAgent(
         "engineers, data engineers, data security analysts, cloud "
         "engineers; skip basics and focus on practical insight. Explain "
         "both the 'how' and the 'why'. Include concise code snippets when "
-        "helpful. Follow the outline's structure (H2/H3). Output only the "
-        "final article in Markdown (no fence around the whole post)."
+        "helpful. Follow the outline's structure (H2/H3). Never use em "
+        "dashes or hyphens in prose; rephrase instead (hyphens are "
+        "allowed only inside code blocks, URLs, and file names). Output "
+        "only the final article in Markdown (no fence around the whole "
+        "post)."
     ),
     output_key="blog_post",
 )
